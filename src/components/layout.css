@@ -1,12 +1,13 @@
 :root{
-  --mainBrown:#2d1ef1;
-  --mainYellow:#ff9e09;
+  --mainBrown:#552b03;
+  --mainYellow:rgb(255, 126, 20);
   --mainGray:#ece8dc;
   --mainwhite:#fff;
   --mainblack:#222;
 
 }
 body{
+  
   background-color: var(--mainwhite);
   color:var(--mainblack);
   font-family: Verdana, Geneva, Tahoma, sans-serif !important;
@@ -22,4 +23,43 @@ h1,h2,h3,h4,h5,h6{
   cursor: pointer;
   color: var(--mainYellow);
   font-size: 1.8rem;
+}
+
+.default-background {
+ 
+
+  
+  min-height: 80vh;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  background-position: center;
+  background: linear-gradient(rgb(255, 126, 20, 0.5), rgb(255, 126, 20,0.5));
+  background-size: cover;
+}
+
+.btn-yellow{
+
+  color: var(--mainYellow);
+  border-color: var(--mainYellow);
+  font-weight: bold;
+}
+.btn-yellow:hover{
+  background: var(--mainYellow);
+  color:var(--mainBrown)
+}
+
+.footer{
+ background-color: var(--mainBrown);
+
+}
+.about-background{
+min-height: 60vh;
+display:flex;
+align-items: center;
+justify-content: center;
+background-position: center;
+background: linear-gradient(rgb(255, 126, 20, 0.5), rgb(255, 126, 20, 0.5));
+background-size: cover;
+
 }
