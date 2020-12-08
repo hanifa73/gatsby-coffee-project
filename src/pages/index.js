@@ -38,8 +38,8 @@ export const query = graphql`
     edges {
       node {
         category
-        descripition {
-          descripition
+        descrition {
+          descrition
         }
         id
         price

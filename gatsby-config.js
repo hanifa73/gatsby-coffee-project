@@ -1,6 +1,15 @@
-require("dotenv").config({
-  path: `.env.${process.env.NODE_ENV}`,
-})
+
+// Initialize dotenv
+require('dotenv').config({
+  path: '.env' // or 
+});
+// const config = require('gatsby-plugin-config').default;
+// const contentful = require('coffee 1');
+
+// And then you can use the config in gatsby-config.js
+// const config = require('gatsby-plugin-config');
+// let activeEnv =
+//   process.env.GATSBY_ACTIVE_ENV || process.env.NODE_ENV 
 
 module.exports = {
   siteMetadata: {
@@ -17,18 +26,21 @@ module.exports = {
         path: `${__dirname}/src/images`,
       },
     },
+
     {
       resolve: `gatsby-source-contentful`,
       options: {
-         spaceId:`process.env.CONTENTFUL_SPACE_ID`,
-        // Learn about environment variables: https://gatsby.dev/env-vars
-         accessToken:`process.env.CONTENTFUL_ACCESS_TOKEN`,
-      },
+       
+       spaceId:process.env.CONTENTFUL_SPACE_ID,
+    accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
+    // environment: process.env.CONTENTFUL_ENVIRONMENT,
+       
     },
+  },
     {
 			resolve: 'gatsby-plugin-snipcart',
 			options: {
-        apiKey: `process.env.SNIPCART_API`,
+        apiKey: process.env.SNIPCART_API,
         autopop:true,
 			},
 		},
