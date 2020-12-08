@@ -63,3 +63,7 @@ background: linear-gradient(rgb(255, 126, 20, 0.5), rgb(255, 126, 20, 0.5));
 background-size: cover;
 
 }
+
+.menu,.contact{
+  background-color: var(--mainGray);
+}
