@@ -1,7 +1,8 @@
 
 // Initialize dotenv
 require('dotenv').config({
-  path: '.env' // or 
+    path: `.env`,            
+    //  .env.${process.env.NODE_ENV}`,
 });
 // const config = require('gatsby-plugin-config').default;
 // const contentful = require('coffee 1');
@@ -14,7 +15,7 @@ require('dotenv').config({
 module.exports = {
   siteMetadata: {
     title: `hanifa coffee`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
+    description: ` coffee project with this default starter.`,
     author: `@gatsbyjs`,
   },
   plugins: [
@@ -31,8 +32,8 @@ module.exports = {
       resolve: `gatsby-source-contentful`,
       options: {
        
-       spaceId:process.env.CONTENTFUL_SPACE_ID,
-    accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
+      spaceId: process.env.CONTENTFUL_SPACE_ID,
+      accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
     // environment: process.env.CONTENTFUL_ENVIRONMENT,
        
     },
