@@ -29,8 +29,8 @@ export const query = graphql`
     {
     childImageSharp{
       fluid{
-        src
-        ...GatsbyImageSharpFluid_tracedSVG
+        ...GatsbyImageSharpFluid
+       
       }
     }
    }
@@ -47,8 +47,8 @@ export const query = graphql`
         title
         image {
           fixed(height: 50, width: 50) {
-            src
-           ...GatsbyContentfulFixed_tracedSVG
+          
+          ...GatsbyContentfulFixed
           }
         }
       }

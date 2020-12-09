@@ -3,7 +3,30 @@ import Product from "./Product";
 import Title from "../Globals/Title.js";
 import {StaticQuery, graphql } from "gatsby";
 
-const getProducts= graphql`{
+// const getProducts= graphql`{
+//   products: allContentfulCoffeeProduct {
+//     edges {
+//       node {
+//         id
+//         title
+//         price
+//         image {
+//           fluid(maxHeight: 100, maxWidth: 100 , quality: 100, cropFocus: CENTER, resizingBehavior: FILL) {
+//                src
+            
+            
+//           }
+//         }
+//       }
+//     }
+ 
+//   }
+  
+// }`
+
+export default function products() {
+    return (
+      <StaticQuery query={graphql`{
   products: allContentfulCoffeeProduct {
     edges {
       node {
@@ -12,18 +35,17 @@ const getProducts= graphql`{
         price
         image {
           fluid(maxHeight: 100, maxWidth: 100 , quality: 100, cropFocus: CENTER, resizingBehavior: FILL) {
-            src
-            ...GatsbyContentfulFluid_tracedSVG
+               src
+            ...GatsbyContentfulFluid_withWebp
+            
           }
         }
       }
     }
+ 
   }
-}`
-
-export default function products() {
-    return (
-        <StaticQuery query={getProducts}  render={data=>{return (
+  
+}`} render={data=>{return (
         <section className="py-5">
          <div className="container">
              <Title title="our products" />
