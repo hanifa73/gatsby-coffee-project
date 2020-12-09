@@ -87,7 +87,7 @@ export default class Menu extends Component {
 
                                       </div>
                                       <p className="text-muted">
-                                        <small>{node.descrition.descrition}</small>  
+                                        <small>{node.descripition.descripition}</small>  
                                       </p>
 
                                  
